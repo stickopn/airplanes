@@ -1,1 +1,4 @@
 # airplanes
+
+run 
+npm start

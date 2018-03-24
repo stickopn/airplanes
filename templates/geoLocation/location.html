@@ -1,0 +1,19 @@
+<div id="design" ng-controller="geoLocationController as geoContr">
+    <h1>Air Traffic</h1>
+    <div class="question"><h2> Use GeoIp?</h2></div>
+    <div class="click">
+        <button ng-click="geoContr.showHideLocation(true)">Yes</button>
+        <button ng-click="geoContr.showHideLocation(false)">No</button>
+    </div>
+    <div ng-if="geoContr.showLocation == true" class="location">
+        <div>Your latitude is: {{geoContr.latitude}}</div>
+        <div>Your longitude is: {{geoContr.longitude}}</div>
+        <a ui-sref="airplanes({ latitude: geoContr.latitude, longitude: geoContr.longitude })">See Airplanes for your location</a>
+    </div>
+
+    <div ng-if="geoContr.showLocation == false">
+        <div class="location two">Error!! It is necessary to allow GeoIp for using this app.</div>
+    </div>
+
+
+</div>

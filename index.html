@@ -1,0 +1,33 @@
+<html ng-app="app">
+  <head>
+    <base href="/">
+    <meta charset="UTF-8">
+    <link rel="icon" type="image/ico" sizes="16x16" href="assets/img/favicon.ico">
+
+    <link rel="stylesheet" href="assets/css/main.css">
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+
+    
+	 <script src="js/lib/jquery-3.2.1.min.js"></script>
+
+	  <script src="angular/angular.min.js"></script>
+    <script src="angular/angular.ui.router.js"></script>
+    <script src="angular/angular.ngGeolocation.js"></script>
+	
+    <script src="js/app/app.js"></script>
+    <script src="js/app/router.js"></script>
+    <script src="js/app/script.js"></script>
+
+    <script src="js/app/geoLocation/geoLocation.module.js"></script>
+    <script src="js/app/geoLocation/geoLocation.controller.js"></script>
+
+    <script src="js/app/airplane/airplane.module.js"></script>
+    <script src="js/app/airplane/airplane.service.js"></script>
+    <script src="js/app/airplane/airplane.controller.js"></script>
+
+  </head>
+
+  <body id="cover">
+    <ui-view></ui-view>
+  </body>
+</html>

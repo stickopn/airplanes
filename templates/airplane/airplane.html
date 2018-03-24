@@ -1,0 +1,44 @@
+<button onclick="topFunction()" id="myBtn" title="Go to top">&uarr;</button>
+<div class="container">
+    <div class="row">
+        <div id="design2" ng-controller="airplaneController as airContr">
+            <h1>Your Airplanes:</h1>
+            <ul ng-repeat="a in airplanes.acList  | orderBy:'Alt':true ">
+                <div ng-click="airContr.showInfo(a.Id)" ng-class="{'eastIcon': airContr.westOrEast(a.Long) == 'east','westIcon': airContr.westOrEast(a.Long) == 'west'}">
+                    <div class="col-xs-12 col-sm-6 col-md-3">
+                        <div class="location-airplane">
+                            <div> <div class="westing"></div><div class="easting"></div>
+                                <div>Id number:
+                                    <span class="info">{{a.Id}}</span>
+                                </div>
+                                <div>Number of Flights:
+                                    <span class="info">{{a.FlightsCount}}</span>
+                                </div>
+                                <div>Altitude:
+                                    <span class="info">{{a.Alt}}</span>
+                                </div>
+                            </div>
+                            <div ng-show="airContr.isInfo && a.Id == airContr.showForId">
+                                <div>Airplane Manufacturer and model:
+                                    <span class="info">{{a.Mdl}}</span>
+                                </div>
+                                <div>Country that the aircraft is registered to:
+                                    <span class="info">{{a.Cou}}</span>
+                                </div>
+                                <div>From:
+                                    <span class="info">{{a.From}}</span>
+                                </div>
+                                <div>To:
+                                    <span class="info">{{a.To}}</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </ul>
+            <div id="butn" class="col-xs-12 col-sm-12 col-md-12">
+              <button onclick="goBack()">GO BACK</button>
+            </div>
+        </div>
+    </div>
+</div>
